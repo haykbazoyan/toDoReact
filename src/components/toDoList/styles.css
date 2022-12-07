@@ -1,0 +1,8 @@
+.non_styles ul {
+    list-style-type: none;
+}
+
+  .todo_item {
+    width: 200px;
+    margin: 5px;
+  }
