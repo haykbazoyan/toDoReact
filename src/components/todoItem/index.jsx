@@ -6,7 +6,7 @@ const TodoItem = ({toDoText}) => {
             <label className="label">
                 <input type="checkbox" />
                 {toDoText}
-                <button>X</button>
+                <button className="close_button">X</button>
             </label>
         </div>
     )

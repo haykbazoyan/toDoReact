@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import InputForm from "./components/inputForm";
 import TodoList from "./components/toDoList";
 
 function App() {
@@ -25,8 +26,9 @@ function App() {
   return (
     <div className="App">
       <h1>My Todo List</h1>
+      <InputForm />
       <TodoList data={todos} />
-    </div>
+    </div> 
   );
 }
 

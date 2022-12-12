@@ -2,3 +2,18 @@
     display: flex;
     justify-content: space-between;
 }
+
+.close_button {
+    width: 30px;
+    background: none;
+    border: 1px solid #497174;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.close_button:hover {
+    background: #EB6440;
+    color: #fff;
+    border: 1px solid #EB6440;  
+}
