@@ -21,7 +21,6 @@ function App() {
       isCompleted: false,
     },
   ]);
-  const data = ["Learn JS", "Learn ReactJS", "Learn Redux"];
 
   return (
     <div className="App">
