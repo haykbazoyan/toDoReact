@@ -1,12 +1,25 @@
 import "./styles.css"
 
-const TodoItem = ({toDoText}) => {
+const TodoItem = ({todo, onChange, onDelete}) => {
     return (
         <div>
             <label className="label">
-                <input type="checkbox" />
-                {toDoText}
-                <button className="close_button">X</button>
+                <input type="checkbox" checked={todo.isCompleted} onChange={(e) => {
+                    //e.target.checked
+                    onChange({
+                        ...todo,
+                        isCompleted: e.target.checked
+                    })
+                }} />
+                {todo.text}
+                <button
+                    className="close_button"
+                    onClick={() => {
+                        onDelete(todo);
+                    }}
+                >
+                    X
+                </button>
             </label>
         </div>
     )
