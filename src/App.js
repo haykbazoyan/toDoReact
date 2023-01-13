@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import InputForm from "./components/inputForm";
+import TodoFooter from "./components/todoFooter";
 import TodoList from "./components/toDoList";
 
 function App() {
@@ -25,9 +26,26 @@ function App() {
   return (
     <div className="App">
       <h1>My Todo List</h1>
-      <InputForm />
+      <InputForm
+        onAdd={(text) => {
+          setTodos([
+            ...todos,
+            {
+              id: Math.random(),
+              text: text,
+              isCompleted: false,
+            },
+          ]);
+        }}
+      />
       <TodoList data={todos} />
-    </div> 
+      <TodoFooter
+        todos={todos}
+        onClearCompleted={() => {
+          setTodos(todos.filter((el) => !el.isCompleted));
+        }}
+      />
+    </div>
   );
 }
 
