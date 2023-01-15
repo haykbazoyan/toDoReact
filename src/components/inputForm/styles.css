@@ -1,8 +1,18 @@
+.input-form {
+    display: flex;
+    gap: 8px;
+}
+
 .button {
-    width: 30px;
-    background: none;
-    border: 1px solid #497174;
-    border-radius: 4px;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-left: 4px;
     padding: 4px;
     cursor: pointer;
+}
+
+.button:hover {
+    background: #6899D3;
+    color: #fff;
 }
